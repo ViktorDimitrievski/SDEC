@@ -60,10 +60,25 @@ function toWords(number) {
 			toNinety(firstDigit);
 		}else if (firstDigit < 100){
 			toTensLoop(firstDigit);
+		}else{
+			toHundredLoop(firstDigit);
 		}
 		result.innerHTML += " ";
 		result.innerHTML += "milion ";
 		number = parseInt(number % 1000000);
+		toWords(number);
+	}else {
+		var firstDigit = parseInt(number / 1000000000);
+		if(firstDigit < 20){
+			toNinety(firstDigit);
+		}else if (firstDigit < 100){
+			toTensLoop(firstDigit);
+		}else{
+			toHundredLoop(firstDigit);
+		}
+		result.innerHTML += " ";
+		result.innerHTML += "bilion ";
+		number = parseInt(number % 1000000000);
 		toWords(number);
 	}
 	
