@@ -1,12 +1,15 @@
-var number = 0;
+var number = 0; //name of varible for storing number from input field
 var result = document.getElementById('displayResult');
+
 function getValue (){
-	number = document.getElementById('numberFromInput').value; //Geting value from input field and storin in varible called number
+	number = document.getElementById('numberFromInput').value; //Geting value from input field and storin in varible number
 	
 	//console.log(number);
 	//var result = document.getElementById('displayResult');
 	//result.innerHTML = "Input number = " + number;
-	var par = parseInt(number);
+	var par = parseInt(number); //geting parsed value from input field stored in varible number
+	number = par; // set number value in integer format
+	console.log(number);
 	if(number <= 0)
 	{
 		result.innerHTML = "Invalid input";
@@ -20,77 +23,66 @@ function getValue (){
 
 
 function toWords(number) {
-   
-  var numbersInArray = ["",
-						"One",
-						"Two",
-						"Three",
-						"Four",
-						"Five",
-						"Six",
-						"Seven",
-						"Eight",
-						"Nine",
-						"Ten",
-						"Eleven",
-						"Twelve",
-						"Thirteen",
-						"Fourteen",
-						"Fifteen",
-						"Sixteen",
-						"Seventeen",
-						"Eighteen",
-						"Nineteen",
-						"Twenty"
-]
-var testbroj = 4;
-	for(var index = 0;  index <= 20; index++)
-	{
-		if(testbroj === index)
-		{
-			//var  printingOnDisplay = numbersInArray[index];
-			result.innerHTML = numbersInArray[index];//printingOnDisplay;
+
+	
+	if(number <=19 ){
+		result.innerHTML = number;
+		return toNinety(number);
+		
+	}else if(number < 100){
+		var tenDigits = parseInt(number / 10);
+		toTens(tenDigits);
+		number = parseInt(number % 10);
+		toNinety(number);
+	}else if(number  < 1000)
+	
+	
+	
+	
+	function toNinety (num) {
+		var num1to20InArray = ["zero",
+						"one",
+						"two",
+						"three",
+						"four",
+						"five",
+						"six",
+						"seven",
+						"eight",
+						"nine",
+						"ten",
+						"eleven",
+						"twelve",
+						"thirteen",
+						"fourteen",
+						"fifteen",
+						"sixteen",
+						"seventeen",
+						"eighteen",
+						"nineteen",
+		]
+		for(var i= 0; i < 20; i++){
+			if(num === i){
+				result.innerHTML += num1to20InArray[i];
+				
+			}
 		}
 	}
-  
-  
-  /*/ switch(number)
-   {
-	   case 1:
-	   result.innerHTML = "One";
-	   
-   }
-   
-   */
-   
-   /*
-   
-   if(CheckingNumber > 99)
-   {
-	   result.innerHTML = "hundred";
-   }
-   if(CheckingNumber > 999)
-   {
-	    result.innerHTML = "thousand";
-   }
-   if(CheckingNumber > 99999)
-   {
-	   result.innerHTML = "hundred";
-   }
-   if(CheckingNumber >  999999)
-   {
-	   result.innerHTML = "million";
-   }
-   if(CheckingNumber >  999999999)
-   {
-	   result.innerHTML = "billion";
-   }
-    if(CheckingNumber >  999999999999)
-   {
-	   result.innerHTML = "trillion";
-   }
-   
-*/
-   
-   return result;
+	
+	function toTens(num){
+		var numTens = ["",
+				"twenty",
+				"thirty",
+				"forty", 
+				"fifty", 
+				"sixty",
+				"seventy",
+				"eighty", 
+				"ninety"
+		]
+		result.innerHTML += numTens[num-1];
+	}
 }
+
+
+
