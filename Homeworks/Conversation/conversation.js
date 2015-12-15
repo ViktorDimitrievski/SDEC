@@ -42,7 +42,7 @@ function toWords(number) {
 		number = parseInt(number % 100);
 		toTensLoop(number);
 	}else if(number < 999999){
-		var firstDigit = parseInt(number / 1000)
+		var firstDigit = parseInt(number / 1000);
 		if(firstDigit < 20){
 		toNinety(firstDigit);
 		}else if (firstDigit < 100){
@@ -53,6 +53,17 @@ function toWords(number) {
 		result.innerHTML += " ";
 		result.innerHTML += "thousand ";
 		number = parseInt(number % 1000);
+		toWords(number);
+	}else if(number < 999999999){
+		var firstDigit = parseInt(number / 1000000);
+		if(firstDigit < 20){
+			toNinety(firstDigit);
+		}else if (firstDigit < 100){
+			toTensLoop(firstDigit);
+		}
+		result.innerHTML += " ";
+		result.innerHTML += "milion ";
+		number = parseInt(number % 1000000);
 		toWords(number);
 	}
 	
