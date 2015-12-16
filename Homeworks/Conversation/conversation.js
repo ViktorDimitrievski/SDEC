@@ -62,6 +62,7 @@ function toWords(number) {
 			toTensLoop(firstDigit);
 		}else{
 			toHundredLoop(firstDigit);
+			//con0
 		}
 		result.innerHTML += " ";
 		result.innerHTML += "milion ";
