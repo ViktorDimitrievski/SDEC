@@ -9,7 +9,7 @@ function getValue (){
 	//result.innerHTML = "Input number = " + number;
 	var par = parseInt(number); //geting parsed value from input field stored in varible number
 	number = par; // set number value in integer format
-	console.log(number);
+	//console.log(number);
 	if(number <= 0)
 	{
 		result.innerHTML = "Invalid input";
@@ -18,13 +18,8 @@ function getValue (){
 	toWords(number);
 	}
 }
-
-
-
-
 function toWords(number) {
 
-	
 	if(number <=19 ){
 		
 		return toNinety(number);
@@ -82,7 +77,6 @@ function toWords(number) {
 		number = parseInt(number % 1000000000);
 		toWords(number);
 	}
-	
 	
 	
 	function toTensLoop (num){
