@@ -1,6 +1,7 @@
 var number = 0; //name of varible for storing number from input field
 var result = document.getElementById('displayResult');
 var stringArray = '';
+stringArrayMK = '';
 
 function getValue (){
 	number = document.getElementById('numberFromInput').value; //Geting value from input field and storin in varible number
@@ -17,6 +18,7 @@ function getValue (){
 	}
 	else {
 	stringArray = '';
+	stringArrayMK = '';
 	toWords(number);
 	}
 }
