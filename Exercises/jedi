@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jedi Battle Simulator</title>
+</head>
+<body>
+	<div id="entry">
+		<table style="border: 1px solid black; width:100%">
+			<tr>
+				<td>
+				<span>Name:</span><input type="text" id="inName" /></br>
+				<span>Power:</span><input type="number" id="inPower" /></br>
+				<span>Armor:</span><input type="text" id="inArmor" /></br>
+				<span>ForceLevel:</span><input type="text" id="inForceLevel" /></br>
+				<span>Color:</span><select id="selectColor"></select>
+				<button id="createJedi">Create new Jedi</button>
+				
+				</td>
+				<td></td>
+				<td><span>Name:</span><input type="text" id="inNameSith" /></br>
+				<span>Power:</span><input type="number" id="inPowerSith" /></br>
+				<span>Armor:</span><input type="text" id="inArmorSith" /></br>
+				<span>ForceLevel:</span><input type="text" id="inForceLevelSith" /></br>
+				<span>Color:</span> always red man!
+				<button id="createSith">Create new Sith</button></td>
+			</tr>
+		</table>
+	</div>
+	<div id="display">
+		<table style="border: 1px solid green; width:100%">
+			<tr>
+				<td id="jediList">jedi list</td>
+				<td>current battle info</td>
+				<td>sith list</td>
+			</tr>
+		</table>
+	</div>
+	<script src="app.js"></script>
+	<script src="jedi.js"></script>
+	<script src="sith.js"></script>
+</body>
+</html>
+
+
+
+jedi.js
+
+var simulator = simulator || {};
+
+simulator.Jedi = function(name, power, armor, forceLevel, color){
+	this.name = name;
+	
+	this.power = Math.max(1, Math.min(10, power));	
+	this.armor = Math.max(1, Math.min(5, armor));
+	this.forceLevel = Math.max(1, Math.min(5, forceLevel));
+	
+	var isValidColor = false;
+	for (var index = 0; index < simulator.jediColors.length; index++) {
+		var validColor = simulator.jediColors[index];
+		if (color === validColor)
+			isValidColor = true;
+	}
+
+	if (!isValidColor){
+		throw new Error(color +" is not a valid lightsabre color for a jedi");
+	}
+	
+	this.color = color;
+	
+	var health = 100;
+	
+	this.getHealth = function(){
+		return health;
+	};
+};
+
+simulator.jediColors = ['blue', 'green', 'purple', 'yellow']; 
+
+
+simulator.createSelect = function (){
+
+	var inputColor = document.getElementById("selectColor");
+	for(var i=0; i <simulator.jediColors.length; i++){
+			var option = document.createElement("option");
+			
+			option.value = simulator.jediColors[i];
+			option.innerHTML = simulator.jediColors[i];
+			inputColor.appendChild(option);
+			
+		}
+}
+
+var createJediButton = document.getElementById("createJedi");
+
+createJediButton.addEventListener("click", function(){
+	var inputName = document.getElementById("inName").value;
+	var inputArmor = document.getElementById("inArmor").value;
+	var inputPower = document.getElementById("inPower").value;
+	var inputForceLevel = document.getElementById("inForceLevel").value;
+	var inputColor = document.getElementById("selectColor").value;
+	
+	
+	var jedaj4e = new simulator.Jedi(inputName,inputPower,inputArmor,inputForceLevel,inputColor);
+	jediArmy.push(jedaj4e);
+	console.log(jediArmy);
+	
+	});
+	
+
+
+simulator.createSelect();
+
+
+
+sith.js
+
+
+var simulator = simulator || {};
+
+simulator.Sith = function (name, power, armor, forceLevel, angerLevel) {
+	this.name = "Darth " + name;
+	this.power = Math.max(1, Math.min(10, power));
+	this.armor = Math.max(1, Math.min(5,armor));
+	this.forceLevel = Math.max(1, Math.min(5,forceLevel));
+	this.angerLevel = Math.max(1, Math.min(99,angerLevel));
+	this.color = "red";
+	
+	var health = 100;
+	
+	this.getHealth = function(){
+		return health;
+	}
+}
+
+var createSithButton = document.getElementById("createSith");
+
+createSithButton.addEventListener("click", function(){
+	var inputName = document.getElementById("inNameSith").value;
+	var inputArmor = document.getElementById("inArmorSith").value;
+	var inputPower = document.getElementById("inPowerSith").value;
+	var inputForceLevel = document.getElementById("inForceLevelSith").value;
+	var inputColor = "red";
+	
+	
+	var sith4e = new simulator.Sith(inputName,inputPower,inputArmor,inputForceLevel,inputColor);
+	sithArmy.push(sith4e);
+	console.log(sithArmy);
+	
+	});
+	
+
+
+simulator.createSelect();
+
+
+
+
+app.js
+var simulator = {};
+var jediArmy = [];
+var sithArmy = [];
+
+var jediDisplayList = document.getElementById("jediList");
+
+simulator.displayJedi = function(){
+	console.log(simulator.jediArmy);
+};
+
+
+simulator.displayJedi();
