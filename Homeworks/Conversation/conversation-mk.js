@@ -42,6 +42,9 @@ function toWords(number) {
 	stringArrayMK = stringArrayMK.capitalize();
 	result.innerHTML = stringArrayMK;//printing on screen
 	
+	if
+	
+	
 	return stringArrayMK;
 }
 
