@@ -197,11 +197,36 @@ p{
 	
 }
 
-.qube{
+.noFilledQube{
 	width: 30px;
 	height: 30px;
 	background-color: #fff;
+	opacity: 0.5;
 	margin-left: 10px;
+	position: absolute;
 }
 
+@keyframes fillingQube{
+	0%{
+		width: 0px;
+	}
+	100%{
+		width: 30px;
+		transition-property: background-color;
+		transition-duration: 1s;
+		transition-timing-function: ease-out;
+	}
+}
+.filingQube{
+	height: 30px;
+	background-color: #fff;
+	margin-left: 10px;
+	position: absolute;
+	/*Animation part */
+	animation-name: fillingQube;
+	animation-duration: 5s;
+	animation-delay: 0.5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
 
