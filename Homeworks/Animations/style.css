@@ -1,0 +1,207 @@
+
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	padding: 20px 0px 0px 30px;
+	
+	display: visible;
+}
+
+.loadings{
+	background-color: #E84C3C;
+	width: 500px;
+	height:500px;
+}
+
+#colums{
+	padding: 10px;
+	margin:10px;
+	width: 200px;
+	max-height:250px;
+	float: left;
+}
+@keyframes fillingBorder {
+    0% {
+	background-color: #fff;
+	width: 0%;
+	}
+    100% {
+	width: 100%;
+	}
+}
+p{
+	text-align:center;
+}
+.loadingTwoBorders{
+	background-color: #fff;
+	display: block;
+	content: " ";
+	height: 5px;
+	width:10px;
+	
+	/* Animation part */
+	animation-name: fillingBorder;
+	animation-duration: 8s;
+	animation-timing-function: ease-in-out;
+	animation-delay: .5s;
+	animation-iteration-count: infinite;
+}
+.fullwhitefill{
+	background-color: rgba(255, 255, 255, 0.5);
+	opacity: 0.3;
+	color: #fff;
+}
+
+@keyframes fillingDiv{
+	
+	0% {
+		width: 0px;
+	}
+	100%{
+		width: 100px;
+	}
+	
+}
+.textInside{
+	text-align:center !important;
+	color: #fff;
+	opacity: 1 !important;
+	z-index: 1000;
+}
+.nofiledDiv{
+	background-color: #fff;
+	opacity: 0.3;
+	width: 100px;
+	height: 20px;
+	text-align:center;
+	position: absolute;
+	
+}
+.fillingHoleDiv {
+	
+	background-color: #fff;
+	opacity: 1 !important;
+	height: 20px;
+	text-align:center;
+	position: absolute;
+	
+	
+	/*Animation part */
+	animation-name: fillingDiv;
+	animation-duration: 8s;
+	animation-timing-function: ease-in;
+	animation-delay: .5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes rollingCircle {
+  0% {
+    left: 0;
+    top: 0;
+  }
+ /* 25% {
+    left:50px;
+    top: 0px;
+  }*/
+  
+  50% {
+    left:50px;
+    top:25px;
+  }
+ /* 75% {
+    left:0px;
+    top: 50px;
+  }*/
+  100% {
+    left:0px;
+    top: 25px;
+  }
+}
+
+.rolingCirlces{
+	margin-left: 100px;
+}
+.circle{
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 50%;
+	opacity: 0.5;
+	position: initial;
+    display: inline-block;
+	
+	
+}
+
+#circle1{
+	position: relative;
+	/*Animation part */
+	animation-name: rollingCircle;
+	animation-duration: 4s;
+	animation-delay: .5s;
+	animation-iteration-count: infinite;
+}
+
+#circle2{
+
+}
+
+.staticCircle {
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 50%;
+	position: initial;
+    display: inline-block;
+}
+
+@keyframes rollaroundQube {
+	
+	0%{
+		top:0;
+		left: 0;
+	}
+	25%{
+		top: 0;
+		left: 40px;
+	}
+	50%{
+		top: 40px;
+		left: 40px;
+	}
+	75%{
+		top: 40px;
+		left: 0;
+	}
+	100%{
+		top:0;
+		left:0;
+	}
+}
+
+.circleRolingCube{
+	width: 5px;
+	height: 5px;
+	margin: 2px;
+	border-radius: 50%;
+	background-color: #fff;
+	position: relative;
+	
+	/* Animation part */
+	animation-name: rollaroundQube;
+	animation-duration: 3s;
+	animation-delay: .2s;
+	animation-iteration-count: infinite;
+	
+}
+
+.qube{
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
+	margin-left: 10px;
+}
+
+
