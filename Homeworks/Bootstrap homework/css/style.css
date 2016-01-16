@@ -1,0 +1,38 @@
+/* style.css */
+
+html,
+body{
+	height: 100%;
+}
+
+
+#cover{
+	background: #222 url('../img/stars.jpg') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	display: table;
+
+}
+
+
+#cover_caption{
+	color: white;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+footer{
+	background-color:#474F54;
+	padding-top: 30px;
+	color: #fff;
+}
+
+footer a{
+	color: #025790;
+}
+footer li{
+	list-style:none;
+}
