@@ -36,3 +36,19 @@ footer a{
 footer li{
 	list-style:none;
 }
+
+.secWithBacground{
+	background: url('../img/girlincar.jpg') no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.blackBox{
+	margin-top: 50px;
+	padding: 50px;
+	background-color: rgba(0,0,0, 0.5);
+	color: #fff;
+}
