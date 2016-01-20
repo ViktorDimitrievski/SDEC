@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Advent Of Code ex.6</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+<body>
+	<div class="big">One</div>
+    <div class="big">Two</div>
+    <div>Three</div>
+    <span class="big">One</span>
+    <span class="big">Two</span>
+    <span>Three</span>
+    <br />
+    <button id="colorSpans">Color Spans</button>
+    <button id="colorDivs">Color Divs</button>
+    <button id="colorBigs">Color BigOnes</button>
+    <br />
+    <button id="uncolorSpans">UnColor Spans</button>
+    <button id="uncolorDivs">UnColor Divs</button>
+    <button id="uncolorBigs">UnColor BigOnes</button>
+    <br /><hr />
+    <button class="span" id="hideSpans">Hide Spans</button>
+    <button class="div" id="hideDivs">Hide Divs</button>
+    <button class="big" id="hideBigs">Hide BigOnes</button>
+
+	
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="js/myScript.js"></script>
+</body>
+</html>
+
+
+
+.spanColor{
+	background-color: orange;
+}
+.divColor{
+	background-color: yellow;
+}
+.bigColor{
+	font-size: 24px;
+	background-color: red;
+}
+
+
+
+
+var areDivsShown = true;
+
+$(function(){
+	$("#colorSpans").click(function(){
+		$("span").addClass("spanColor");
+		
+	});
+	
+	$("#colorDivs").click(function(){
+		$("div").addClass("divColor");
+		
+	});
+	
+	$("#colorBigs").click(function(){
+		$(".big").addClass("bigColor");
+	});
+	
+	$("#uncolorSpans").click(function(){
+		$("span").removeClass("spanColor bigColor");
+	});
+	$("#uncolorDivs").click(function(){
+		$("div").removeClass("divColor bigColor");
+		
+	});
+	
+	$("#uncolorBigs").click(function(){
+		$(".big").removeClass("bigColor");
+	});
+	
+	//$("#hideSpans").click(function(){
+	//	$("span").hide();
+	//});
+	
+	//var areDivsShown = true;
+	/*$("#hideDivs").click(function(event){
+		console.log(event);
+		hideShow(event.target.id,event.target.className);
+	});
+	
+		$("#hideSpans").click(function(event){
+		console.log(event);
+		hideShow(event.target.id,event.target.className);
+	});
+	$("#hideBigs").click(function(event){
+		console.log(event);
+		hideShow(event.target.id,event.target.className);
+	});*/
+	
+	$("button").click(function(event){
+		hideShow(event.target.id,event.target.className);
+	});
+	
+});
+
+
+
+function hideShow(parametar,clasa){	
+		
+		var button = $("#"+parametar);
+	
+		
+		if(areDivsShown){
+			areDivsShown = false;
+			$(clasa).fadeOut();
+			button.text("Show");
+			}
+		else{
+			areDivsShown = true;
+			$(clasa).fadeIn();
+			button.text("Hide");
+		}
+};
