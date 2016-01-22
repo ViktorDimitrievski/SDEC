@@ -1,0 +1,64 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	color: #fff;
+}
+a:hover{
+	color: #929292;
+}
+.header{
+
+	background: url('../img/pen-idea-bulb-paper.jpg') center center no-repeat fixed red;
+	width: 100%;
+	height: 100vh;
+}
+
+.navLinksPosition{
+	float:right;
+}
+.nav-beauty{
+	
+}
+
+.nav-beauty a{
+	color: #fff;
+	padding: 10px 10px;
+}
+
+.nav-beauty a:hover{
+	color: #929292;
+	//text-decoration: underline;
+	border: 3px solid #929292;
+
+}
+
+
+#aboutMe{
+	padding-top: 50px;
+	height: 500px;
+}
+
+.footer{
+	background-color: #313131;
+	background-attachment:local;
+	height: 140px;
+	color: #fff !important;
+	text-align: center;
+}
+
+.marginTen{
+	margin: 10px;
+}
+
+
+
+/* Color classes */ 
+.red{
+	color: red;
+}
+
+.brown{
+	color: #6F4E37;
+}
