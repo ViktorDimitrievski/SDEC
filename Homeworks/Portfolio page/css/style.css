@@ -25,12 +25,7 @@ a:hover{
 }
 
 @media screen and (max-width: 542px){
-	.navbar ul{
-		
-		    list-style: url("https://cdn3.iconfinder.com/data/icons/142-mini-country-flags-16x16px/32/flag-united-kingdom2x.png");
-	}
-	
-	.nav-item{
+		.nav-item{
 		float: left;
 		display: block;
 		width: 100%;
