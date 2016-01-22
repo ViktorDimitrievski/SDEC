@@ -10,39 +10,45 @@
 
 <header class="header">
 	<nav class="navbar navbar-fixed-top nav-beauty">
-	  <a class="navbar-brand" href="#">Viktor D.</a>
-	  <ul class="nav navbar-nav navLinksPosition">
-		<li class="nav-item">
-		  <a class="nav-link" href="#">About Me </a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" href="#">Techonologies</a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" href="#">Skils</a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" href="#">Projects</a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" href="#">Testimonials</a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" href="#">Follow me</a>
-		</li>
-	  </ul>
+		
+	    <a class="navbar-brand" href="#">Viktor D.</a>
+		<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">&#9776;</button>
+		<div class="collapse navbar-toggleable-xs" id="CollapsingNavbar">
+			  <ul class="navbar navbar-nav navLinksPosition">
+				<li class="nav-item">
+				  <a class="nav-link" href="#aboutMe">About Me </a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#knowingTechnologies">Techonologies</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#">Skils</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#projectsDone">Projects</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#testimonials">Testimonials</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#footers">Follow me</a>
+				</li>
+			  </ul>
+		  </div>
+		  
+		  
 	</nav>
 </header>
 
-<section id="aboutMe">
+<section id="aboutMe" class="sectionPaddingMargin">
 	<div class="container">
 		<div class="row">
-		<h1>ABOUT ME</h2>
+		<h1 class="sectionHeading">Viktor Dimitrievski</h2>
 			<div class="col-lg-3">
-				<img alt="Photo of my"  class="img-fluid" src="img/me.png">
+				<img alt="Photo of my" class="img-fluid" src="img/me.png">
 			</div>
-			<div class="col-lg-9">
-				<h2>Viktor Dimitrievski <i class="fa fa-mars"></i></h2>
+			<div class="col-lg-8 col-lg-offset-1">
+				<h2>Viktor Dimitrievski<i class="fa fa-mars"></i></h2>
 				<span><i class="fa fa-calendar"></i> 21.02.1994</span>
 				<span><i class="fa fa-home"></i> Republic of Macedonia</span>
 				<p>Hello form this side of internet. So Im learing web development at SEDC. Also I make and design for web pages and design for beasnues cards, brochures, concert posters</p>
@@ -56,27 +62,72 @@
 
 <section id="skils"></section>
 
-<section id="projectsDone"></section>
-
-<section id="testimonials">
+<section id="projectsDone" class="sectionPaddingMargin">
 	<div class="container">
 		<div class="row">
+			<h1 class="sectionHeading">PROJECTS</h1>
+			<div id="projectListing">
+				<ul class="projectList">
+					<li class="projectItem">Web Desings <span class="valueOfprojectItem">5</span></li>
+					<li class="projectItem">Applications <span class="valueOfprojectItem">3</span></li>
+					<li class="projectItem">Busness cards <span class="valueOfprojectItem">8</span></li>
+					<li class="projectItem">Brochures <span class="valueOfprojectItem">1</span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row marginTen">
+
+			<div class="col-lg-3">
+				<img width="255px" height="255px" src="img/project.jpg">
+			</div>
+			<div class="col-lg-3">
+				<img width="255px" height="255px" src="img/project.jpg">
+			</div>
+			<div class="col-lg-3">
+				<img width="255px" height="255px" src="img/project.jpg">
+			</div>
+			<div class="col-lg-3">
+				<img width="255px" height="255px" src="img/project.jpg">
+			</div>
+		</div>
+		
+		<div class="row marginTen">
+			<div class="col-lg-3">
+				<img width="255px" height="255px" src="img/project.jpg">
+			</div>
+			<div class="col-lg-3">
+				<img width="255px" height="255px" src="img/project.jpg">
+			</div>
+			<div class="col-lg-3">
+				<img width="255px" height="255px" src="img/project.jpg">
+			</div>
+			<div class="col-lg-3">
+				<img width="255px" height="255px" src="img/project.jpg">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="testimonials" class="sectionPaddingMargin">
+	<div class="container">
+		<div class="row">
+		<h1 class="sectionHeading"> Testimonials </h1>
 			<div class="col-lg-4">
 			<blockquote class="blockquote">
-				<p>&ldquo; Suspendisse eleifend ultricies diam, id finibus augue. Maecenas sit amet massa ac ipsum luctus consequat. Mauris in nisi nulla. &rdquo;</p>
-				<footer>Name of company/person</footer>
+				<p>&ldquo; Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. &rdquo;</p>
+				<footer>ford.mk</footer>
 			</blockquote>
 			</div>
 			<div class="col-lg-4">
 			<blockquote class="blockquote">
-				<p>&ldquo; Suspendisse eleifend ultricies diam, id finibus augue. Maecenas sit amet massa ac ipsum luctus consequat. Mauris in nisi nulla. &rdquo;</p>
-				<footer>Name of company/person</footer>
+				<p>&ldquo; There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. &rdquo;</p>
+				<footer>lipsum.com</footer>
 			</blockquote>
 			</div>
 			<div class="col-lg-4">
 			<blockquote class="blockquote">
-				<p>&ldquo; Suspendisse eleifend ultricies diam, id finibus augue. Maecenas sit amet massa ac ipsum luctus consequat. Mauris in nisi nulla. &rdquo;</p>
-				<footer>Name of company/person</footer>
+				<p>&ldquo; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. &rdquo;</p>
+				<footer>alphabet.com</footer>
 			</blockquote>
 			</div>
 		</div>
@@ -104,7 +155,8 @@
 	</div>
 </footer>
 
-<!--<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/myScript.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!--<script type="text/javascript" src="js/myScript.js"></script>-->
 </body>
 </html>

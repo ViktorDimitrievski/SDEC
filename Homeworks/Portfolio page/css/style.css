@@ -3,10 +3,10 @@
 	padding: 0px;
 }
 a{
-	color: #fff;
+	color: #EBE7E0;
 }
 a:hover{
-	color: #929292;
+	color: #BDB8AD;
 }
 .header{
 
@@ -14,9 +14,32 @@ a:hover{
 	width: 100%;
 	height: 100vh;
 }
-
+.navbar-brand{
+	float: left;
+}
+.navbar-toggler{
+	float: right;
+}
 .navLinksPosition{
 	float:right;
+}
+
+@media screen and (max-width: 542px){
+	.navbar ul{
+		
+		    list-style: url("https://cdn3.iconfinder.com/data/icons/142-mini-country-flags-16x16px/32/flag-united-kingdom2x.png");
+	}
+	
+	.nav-item{
+		float: left;
+		display: block;
+		width: 100%;
+		text-align: center;
+		background-color: #000;
+		margin-left: 0rem !important;
+		
+	}
+
 }
 .nav-beauty{
 	
@@ -33,13 +56,56 @@ a:hover{
 	border: 3px solid #929292;
 
 }
-
-
-#aboutMe{
-	padding-top: 50px;
-	height: 500px;
+.sectionPaddingMargin{
+	padding-top: 30px;
+	padding-bottom: 50px;
 }
 
+#aboutMe{
+	background-color: #C6D4E1;
+	
+	
+}
+
+.sectionHeading{
+	text-align: center;
+	font-size: 2.5rem;
+	color: #44749D;
+	font-weight: 500;
+	margin-bottom: 1rem;
+}
+#projectsDone{
+	background-color: #EBE7E0;
+}
+
+
+.projectList{
+	text-align: center;
+	list-style: none;
+	
+}
+.projectItem{
+	display:inline;
+	padding-left: 1rem;
+}
+
+.projectItem:hover{
+	outline: 3px solid #C6D4E1;
+}
+
+.valueOfprojectItem{
+	color: #EBE7E0;
+	font-size: 0.9rem;
+	background-color: #BDB8AD;
+	padding: 0.1rem 0.6rem;
+	height: 1.5rem;
+	border-radius: 50%;
+
+}
+#testimonials{
+	background-color: #7F98AD;
+	
+}
 .footer{
 	background-color: #313131;
 	background-attachment:local;
