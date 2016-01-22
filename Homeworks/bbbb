@@ -1,0 +1,261 @@
+<!DOCTYPE>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<header>
+	<nav class="navbar navbar-light bg-faded navbar-fixed-top">
+	  <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#startupMenu">
+		&#9776;
+	  </button>
+	  <a class="navbar-brand" href="#"><img src="img/logo.png" alt="LOGO" height="26px" ></a>
+	  
+	  <div class="collapse navbar-toggleable-xs" id="startupMenu">
+		<ul class="nav navbar-nav pull-md-right">
+		  <li class="nav-item active">
+			<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Features</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Pricing</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="btn btn-primary-outline" href="#">Sign in</a>
+		  </li>
+		</ul>
+	  </div>
+	</nav>
+	
+	<!-- COVER PHOTO PART -->
+<section id="cover" >
+	<div id="cover-content">
+		<h1 class="display-3">This is our Startup</h1>
+		<p class="lead">Lorem Ipsum is simply dummy text of the printing</p>
+		<a href="" class="btn btn-success bt-lg">Sign Up</a>
+	</div>
+</section>
+</header>
+
+<!-- Feautures -->
+<section id="feature-one">
+	<div class="container">
+		<div class="row">
+			<div class="feature-content">
+				<div class="col-lg-6"> 
+					<div class="embed-responsive embed-responsive-16by9  embed-responsive-4by3 embed-responsive-21by9">
+						<iframe   class="embed-responsive-item"  src="https://www.youtube.com/embed/twvh-e06O14?showinfo=0" ></iframe>
+					</div>
+				</div>
+				<div class=" col-lg-5 col-lg-offset-1">
+					<h6>Watch this!</h6>
+					<h2>This is Video</h2>
+					<p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+</section>
+
+<!--Features TWO-->
+<section id="feature-two" class="feauture-dark feauture-caption">
+	<div class="container">
+		<div class="row">
+			<div class="feature-content">
+				<div class="col-lg-6">
+				<h6>Watch this!</h6>
+					<h2>This is Video</h2>
+					<p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic </p>
+					<button type="button" class="btn btn-info">Info</button>
+				</div>
+				<div class="col-lg-6 hidden-md-down">
+					<img src="img/iphone-1.png" alt="iPhone">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="feature-content">
+				<div class="col-lg-6" >
+					<h6>Kudos</h6>
+					<blockquote class="blockquote">
+						&ldquo; 
+						No startup logo, no kiss!
+						&rdquo;
+					
+						<footer class="blockquote-footer">
+							Abraham Linkon a.k.a Hitler
+						</footer>
+					</blockquote>
+					
+				</div>
+				
+				<div class="col-lg-6 hidden-md-down">
+					<img src="img/man.png" alt="men">
+				</div>
+				
+				</div>
+		
+		</div>
+	</div>
+</section>
+
+
+<section id="feauture-four">
+	<div class="container">
+		<div class="row">
+			<div class="feature-content">
+				<div class="col-lg-8 col-lg-offset-2">
+					<h6>Finall heading!</h6>
+					<h2>This is Glupost</h2>
+					<p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic </p>
+					<button type="button" class="btn btn-success btn-lg">Cool</button>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<footer id="main-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				Design by: Student from akademija Seavusevi
+			</div>
+			<div class="col-md-2">
+			<h6> Feautures:</h6>
+				<ul class="list-unstyled">
+					<li>Code</li>
+					<li>Design</li>
+					<li>App</li>
+					<li>Ios</li>
+				</ul>
+			</div>
+			<div class="col-md-2">
+				<h6> Feautures:</h6>
+				<ul class="list-unstyled">
+					<li><i class="fa fa-reddit-alien"></i>Code</li>
+					<li>Design</li>
+					<li>App</li>
+					<li>Ios</li>
+				</ul>
+			</div>
+			<div class="col-md-2">
+				<h6> Feautures:</h6>
+				<ul class="list-unstyled">
+					<li>Code</li>
+					<li><i class="fa fa-female fa-lg"></i>Design</li>
+					<li>App</li>
+					<li>Ios</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+</footer>
+<a href="" id="toTop"><i class="fa fa-angle-up"></i></a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
+
+
+
+html,
+body,
+header{
+	height: 100%;
+}
+
+body{
+	color: #6c6f73;
+}
+
+h1 ,h2, h3, h4, h5{
+	color: #333;
+}
+
+h6{
+	text-transform: uppercase;
+	font-weight:bold;
+	font-size: 0.8rem;
+	letter-spacing: 0.1rem;
+	
+}
+
+img{
+	max-width: 100%;
+}
+
+#cover{
+	background: url('../img/stage.jpg') center center no-repeat;
+	background-size:cover;
+	height:100%;
+	color: #fff !important;
+	width: 100%;
+	display:flex;
+	align-items:center;
+
+}
+#cover-content{
+	color: #fff;
+	font-size: 1.4rem;
+	margin: 0 auto;
+	text-align:center;
+}
+
+#cover-content h1{
+	color: #fff;
+}
+.feature-content{
+	padding: 8rem 0;
+	display: flex;
+	align-items:center;
+}
+.feauture-caption{
+	color: #fff;
+}
+.feauture-caption h2{
+	color: #fff;
+}
+.feauture-dark{
+	background-color: #262f36;
+}
+.feature-content img{
+	margin-bottom: -8rem;
+}
+
+#main-footer{
+	background-color: #262F36;
+	color: #fff;
+	padding: 6rem 0;
+	font-size: 12px;
+	
+}
+#toTop{
+	display: none;
+	position:fixed;
+	
+}
+@media (max-width: 545px){
+	.navbar-nav .nav-item{
+		float: none;
+		text-align:center;
+	}
+}
