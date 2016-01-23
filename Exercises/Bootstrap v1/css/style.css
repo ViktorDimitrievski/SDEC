@@ -1,0 +1,84 @@
+
+
+html,
+body,
+header{
+	height: 100%;
+}
+
+body{
+	color: #6c6f73;
+}
+
+h1 ,h2, h3, h4, h5{
+	color: #333;
+}
+
+h6{
+	text-transform: uppercase;
+	font-weight:bold;
+	font-size: 0.8rem;
+	letter-spacing: 0.1rem;
+	
+}
+
+img{
+	max-width: 100%;
+}
+
+#cover{
+	background: url('../img/stage.jpg') center center no-repeat;
+	background-size:cover;
+	height:100%;
+	color: #fff !important;
+	width: 100%;
+	display:flex;
+	align-items:center;
+
+}
+#cover-content{
+	color: #fff;
+	font-size: 1.4rem;
+	margin: 0 auto;
+	text-align:center;
+}
+
+#cover-content h1{
+	color: #fff;
+}
+.feature-content{
+	padding: 8rem 0;
+	display: flex;
+	align-items:center;
+}
+.feauture-caption{
+	color: #fff;
+}
+.feauture-caption h2{
+	color: #fff;
+}
+.feauture-dark{
+	background-color: #262f36;
+}
+.feature-content img{
+	margin-bottom: -8rem;
+}
+
+#main-footer{
+	background-color: #262F36;
+	color: #fff;
+	padding: 6rem 0;
+	font-size: 12px;
+	
+}
+#toTop{
+	display: none;
+	position:fixed;
+	
+}
+@media (max-width: 545px){
+	.navbar-nav .nav-item{
+		float: none;
+		text-align:center;
+	}
+}
