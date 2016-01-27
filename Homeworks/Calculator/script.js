@@ -2,7 +2,7 @@ var result = document.getElementById("result");
 var number = "";
 var firstNumber = "";
 var operator = "";
-
+var proveriVlez = 0;
 function presmetka(frist,operator4e,second)
 {
 	//console.log(frist,operator4e,second);
@@ -28,16 +28,27 @@ function presmetka(frist,operator4e,second)
 	}
 return rezultatot;		
 }
+
 function printingInLabelVal (val) {
 	console.log(val);
 	
 	switch (val) {
 		
 		case "+":
-		operator = val;
-		result.innerHTML = number + " + ";
-		firstNumber = number;
-		number = "";
+			if(proveriVlez === 0){
+			operator = val;
+			result.innerHTML = number + " + ";
+			firstNumber = number;
+			number = "";
+			proveriVlez++;
+			}
+			else{
+			operator = val;
+			var vratena = presmetka(firstNumber,operator,number);
+			result.innerHTML = vratena;
+			number = "";
+			proveriVlez++;
+			}
 		break;
 		
 		case "-":
@@ -92,7 +103,7 @@ function printingInLabelVal (val) {
 
 elements = document.getElementsByTagName("button");
 
-for (var index = 0; index< 16; index++) {
+for (var index = 0; index < 16; index++) {
 
 	elements[index].onclick = function(){
 		printingInLabelVal(this.value);

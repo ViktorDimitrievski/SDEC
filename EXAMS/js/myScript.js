@@ -28,41 +28,63 @@ function submitInTable(getName,getEmail,getMobile){
 	var readButtonCreating = document.createElement("button");
 	var readText = document.createTextNode("Read");
 	readButtonCreating.appendChild(readText);
-	readButtonCreating.id = "read";
-	readButtonCreating.className = "button";
+	//readButtonCreating.id = "read";
+	readButtonCreating.className = "button read";
 	cellFour.appendChild(readButtonCreating);
 	
 	var updateButtonCreating = document.createElement("button");
 	var updateText = document.createTextNode("Update");
 	updateButtonCreating.appendChild(updateText);
-	updateButtonCreating.id = "update";
-	updateButtonCreating.className = "button";
+	//updateButtonCreating.id = "update";
+	updateButtonCreating.className = "button update";
 	cellFour.appendChild(updateButtonCreating);
 	
 	var deleteButtonCreating = document.createElement("button");
 	var deleteText = document.createTextNode("Delete");
 	deleteButtonCreating.appendChild(deleteText);
-	deleteButtonCreating.className = "button";
-	deleteButtonCreating.id = "delete";
+	deleteButtonCreating.className = "button delete";
+	deleteButtonCreating.id = "btn_"+deleteCounter++;
+	deleteButtonCreating.type = "button";
 	var delDataAtt = document.createAttribute("data-value");
 	delDataAtt.value = deleteCounter++;
 	deleteButtonCreating.setAttributeNode(delDataAtt);
 	cellFour.appendChild(deleteButtonCreating);
 	// !!!!!   END Creating buttons and inserting in table row
+	
+	
+	var deleteButtons = document.getElementsByClassName("button delete");
+	var delBtnCount = deleteButtons.length;
+
+	for(var i=0; i < delBtnCount; i++){
+		deleteButtons[i].onclick = function(){
+			deleteCurnetRow(this);
+		};
+	}
+	
+	var readButtons = document.getElementsByClassName("button read");
+	var readBtnCount = readButtons.length;
+	
+	for(var i = 0; i < readBtnCount; i++){
+		readButtons[i].onclick = function(){
+			readDetails(this);
+		};
+	}
 }
 
-//function readDetails(){
-	
-//}
+function readDetails(r){
+ var tdVrednost = r.parentNode.parentElement;
+ console.log(tdVrednost);
+ var tdChild = tdVrednost.childNodes[0];
+ console.log(tdChild);
+ 
+ 
+ var readDisplay = document.getElementById("details");
+ readDisplay.innerHTML = tdChild.outerText;
+}
 
-document.getElementById("delete").onclick = function() {
-	var clicked = document.getElementById("delete");
-	var valueOfClicked = clicked.getAttribute('data-value');
-	
-	deleteCurnetRow(valueOfClicked);
-}; 
-
+// With this function we delete curnet row which button is clicked and button have parent and is td and td has parenet whis is tr and tr has rowIndex
 function deleteCurnetRow(r) {
-    var i = r.parentNode.rowIndex;
-    document.getElementById("tableForInput").deleteRow(i);
+    var i = r.parentNode.parentNode;
+    document.getElementById("tableForInput").deleteRow(i.rowIndex);
+	 //console.log(i);
 }

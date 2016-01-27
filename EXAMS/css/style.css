@@ -23,25 +23,25 @@ tbody, tr{
 }
 
 .button{
-	font-size: 1rem;
+	/*font-size: 1rem;
 	color: #fff;
 	font-weight: 500;
 	text-transform: capitalize;
-	border-radius: 10px;
+	border-radius: 10px;*/
 }
 
-#read{
-	background-color: grey;
-	border: 1px solid black;
+.read{
+	/*background-color: grey;
+	border: 1px solid black;*/
 	
 }
 
-#update{
+.update{
 	background-color: green;
 	border: 1px solid green;
 }
 
-#delete{
-	background-color: red;
-	border: 1px solid red;
+.delete{
+	/*background-color: red;
+	border: 1px solid red;*/
 }
