@@ -45,3 +45,10 @@ tbody, tr{
 	/*background-color: red;
 	border: 1px solid red;*/
 }
+
+
+#details{
+	border: 1px solid grey;
+	height: auto;
+	width: 15rem;
+}

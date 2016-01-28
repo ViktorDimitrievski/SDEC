@@ -1,4 +1,5 @@
 var deleteCounter = 0;
+var clearDisplay = 0;
 document.getElementById("save").onclick = function() { 
 	var name;
 	var phone;
@@ -69,17 +70,56 @@ function submitInTable(getName,getEmail,getMobile){
 			readDetails(this);
 		};
 	}
+	
+	var updateButtons = document.getElementsByClassName("button update");
+	var updateBtnCount = updateButtons.length;
+	
+	for(var i = 0; i < updateBtnCount; i++){
+		updateButtons[i].onclick = function(){
+			this.innerText = "Save";
+			this.className = "button save";
+			updateRow(this);
+			saveRow(this);
+		}
+	}
+	
 }
 
 function readDetails(r){
- var tdVrednost = r.parentNode.parentElement;
- console.log(tdVrednost);
- var tdChild = tdVrednost.childNodes[0];
- console.log(tdChild);
- 
- 
- var readDisplay = document.getElementById("details");
- readDisplay.innerHTML = tdChild.outerText;
+	 var tdVrednost = r.parentNode.parentElement;
+	 var tdChild = tdVrednost.childNodes[0];
+	 
+	 var readDisplay = document.getElementById("details");
+	 if(clearDisplay === 1){
+		readDisplay.innerHTML = "";
+		clearDisplay = 0;
+	 }
+	 for(var i = 0; i < 3; i++){
+		var tdChild = tdVrednost.childNodes[i]; 
+		if( i === 0)
+			readDisplay.innerHTML += "Name: " + tdChild.outerText + '<br>';
+		if(i === 1)
+			readDisplay.innerHTML += "E-mail: " + tdChild.outerText + '<br>';
+		if( i === 2)
+			readDisplay.innerHTML += "Mobile number: " + tdChild.outerText;
+		
+		clearDisplay = 1;
+	 }
+	 
+	 
+	 
+}
+
+
+function updateRow(r){
+	var rowForUpdate = r.parentNode.parentElement;
+	
+	for(var i = 0; i < 3; i++){
+		var updateCurnetTD = rowForUpdate.childNodes[i];
+		var inputValue = updateCurnetTD.innerText;
+		updateCurnetTD.innerHTML = '<input type="text" value="' + inputValue +'" >';
+	}
+	
 }
 
 // With this function we delete curnet row which button is clicked and button have parent and is td and td has parenet whis is tr and tr has rowIndex
