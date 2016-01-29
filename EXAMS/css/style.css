@@ -37,8 +37,8 @@ tbody, tr{
 }
 
 .update{
-	background-color: green;
-	border: 1px solid green;
+	/*background-color: green;
+	border: 1px solid green;*/
 }
 
 .delete{
@@ -51,4 +51,15 @@ tbody, tr{
 	border: 1px solid grey;
 	height: auto;
 	width: 15rem;
+}
+
+.visible{
+	visibility: visible;
+}
+.hide{
+	visibility: hidden;
+	border: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 0px;
 }

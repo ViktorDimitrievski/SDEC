@@ -7,8 +7,24 @@ document.getElementById("save").onclick = function() {
 	name = document.getElementById("personName").value;
 	phone = document.getElementById("personPhone").value;
 	email = document.getElementById("personEmail").value;
+	
+	if(name === "" || phone === "" || email ==="")
+		alert("Ne se praj pameten vnesi vrednost.");
+	else{
 	submitInTable(name,email,phone);
-	//e.preventDefault(); treba gore vo function da se stavi e
+	}
+	var clean;
+	clean = document.getElementById("personName");
+	clean.value = "";
+	clean = document.getElementById("personPhone");
+	clean.value = "";
+	clean = document.getElementById("personEmail");
+	clean.value = "";
+	//cistenje na input polinjata
+
+
+
+	//e.preventDefault(); treba gore vo function da se stavi e	
 }
 
 
@@ -77,11 +93,23 @@ function submitInTable(getName,getEmail,getMobile){
 	for(var i = 0; i < updateBtnCount; i++){
 		updateButtons[i].onclick = function(){
 			this.innerText = "Save";
-			this.className = "button save";
-			updateRow(this);
-			saveRow(this);
+			this.className = "button save"
+			updateRow(this); // ovde finalno vleguvame so parametarot t.e koe kopce e kliknato vo update funkcijata
+			
+			var saveButtons = document.getElementsByClassName("button save");
+			var saveBtnCount = saveButtons.length;
+			
+			for(var i = 0; i < saveBtnCount; i++){
+				saveButtons[i].onclick = function(){
+				this.innerText = "Update";
+				this.className = "button update";
+				saveRow(this);
+				}
+			}
 		}
 	}
+	
+	
 	
 }
 
@@ -120,6 +148,18 @@ function updateRow(r){
 		updateCurnetTD.innerHTML = '<input type="text" value="' + inputValue +'" >';
 	}
 	
+}
+
+
+function saveRow(r){
+	var holeRow = r.parentElement.parentElement; //rowPar
+	
+	for(var i = 0; i < 3; i++){
+		var tdElemet = holeRow.childNodes[i];
+		var insideTD = tdElemet.childNodes[0];
+		var getingValueFromInputFiled = insideTD.value;
+		tdElemet.innerHTML = getingValueFromInputFiled;
+	}
 }
 
 // With this function we delete curnet row which button is clicked and button have parent and is td and td has parenet whis is tr and tr has rowIndex
