@@ -9,7 +9,7 @@ document.getElementById("save").onclick = function() {
 	email = document.getElementById("personEmail").value;
 	
 	if(name === "" || phone === "" || email ==="")
-		alert("Ne se praj pameten vnesi vrednost.");
+		alert("Ne ne ne biid los vnesi vrednosti");
 	else{
 	submitInTable(name,email,phone);
 	}
