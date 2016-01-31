@@ -89,82 +89,85 @@ function submitInTable(getName,getEmail,getMobile){
 	
 	var updateButtons = document.getElementsByClassName("button update");
 	var updateBtnCount = updateButtons.length;
+	updateBtnRow();
 	
-	for(var i = 0; i < updateBtnCount; i++){
-		updateButtons[i].onclick = function(){
-			this.innerText = "Save";
-			this.className = "button save"
-			updateRow(this); // ovde finalno vleguvame so parametarot t.e koe kopce e kliknato vo update funkcijata
-			
-			var saveButtons = document.getElementsByClassName("button save");
-			var saveBtnCount = saveButtons.length;
-			
-			for(var i = 0; i < saveBtnCount; i++){
+	var saveButtons = document.getElementsByClassName("button save");
+	var saveBtnCount = saveButtons.length;
+	
+	
+	function updateBtnRow(){
+			for(var i = 0; i < updateBtnCount; i++){
+			updateButtons[i].onclick = function(){
+				this.innerText = "Save";
+				this.className = "button save"
+				updateRow(this); // ovde finalno vleguvame so parametarot t.e koe kopce e kliknato vo update funkcijata
+				
+				saveButtons = document.getElementsByClassName("button save");
+				saveBtnCount = saveButtons.length;
+				saveBtnOnClick();
+			};
+		}
+	}
+	
+	function saveBtnOnClick(){
+		for(var i = 0; i < saveBtnCount; i++){
 				saveButtons[i].onclick = function(){
 				this.innerText = "Update";
 				this.className = "button update";
 				saveRow(this);
-				}
-			}
+				updateBtnRow();
+			};
 		}
 	}
-	
-	
-	
-}
 
-function readDetails(r){
-	 var tdVrednost = r.parentNode.parentElement;
-	 var tdChild = tdVrednost.childNodes[0];
-	 
-	 var readDisplay = document.getElementById("details");
-	 if(clearDisplay === 1){
-		readDisplay.innerHTML = "";
-		clearDisplay = 0;
-	 }
-	 for(var i = 0; i < 3; i++){
-		var tdChild = tdVrednost.childNodes[i]; 
-		if( i === 0)
-			readDisplay.innerHTML += "Name: " + tdChild.outerText + '<br>';
-		if(i === 1)
-			readDisplay.innerHTML += "E-mail: " + tdChild.outerText + '<br>';
-		if( i === 2)
-			readDisplay.innerHTML += "Mobile number: " + tdChild.outerText;
+	function readDetails(r){
+		 var tdVrednost = r.parentNode.parentElement;
+		 var tdChild = tdVrednost.childNodes[0];
+		 var readDisplay = document.getElementById("details");
+		 if(clearDisplay === 1){
+			readDisplay.innerHTML = "";
+			clearDisplay = 0;
+		 }
+		 for(var i = 0; i < 3; i++){
+			var tdChild = tdVrednost.childNodes[i]; 
+			if( i === 0)
+				readDisplay.innerHTML += "Name: " + tdChild.outerText + '<br>';
+			if(i === 1)
+				readDisplay.innerHTML += "E-mail: " + tdChild.outerText + '<br>';
+			if( i === 2)
+				readDisplay.innerHTML += "Mobile number: " + tdChild.outerText;
+			
+			clearDisplay = 1;
+		 }
+	}
+
+
+	function updateRow(r){
+		var rowForUpdate = r.parentNode.parentElement;
+		for(var i = 0; i < 3; i++){
+			var updateCurnetTD = rowForUpdate.childNodes[i];
+			var inputValue = updateCurnetTD.innerText;
+			updateCurnetTD.innerHTML = '<input type="text" value="' + inputValue +'" >';
+		}
 		
-		clearDisplay = 1;
-	 }
-	 
-	 
-	 
-}
-
-
-function updateRow(r){
-	var rowForUpdate = r.parentNode.parentElement;
-	
-	for(var i = 0; i < 3; i++){
-		var updateCurnetTD = rowForUpdate.childNodes[i];
-		var inputValue = updateCurnetTD.innerText;
-		updateCurnetTD.innerHTML = '<input type="text" value="' + inputValue +'" >';
 	}
-	
-}
 
 
-function saveRow(r){
-	var holeRow = r.parentElement.parentElement; //rowPar
-	
-	for(var i = 0; i < 3; i++){
-		var tdElemet = holeRow.childNodes[i];
-		var insideTD = tdElemet.childNodes[0];
-		var getingValueFromInputFiled = insideTD.value;
-		tdElemet.innerHTML = getingValueFromInputFiled;
+	function saveRow(r){
+		var holeRow = r.parentElement.parentElement; //rowPar
+		
+		for(var i = 0; i < 3; i++){
+			var tdElemet = holeRow.childNodes[i];
+			var insideTD = tdElemet.childNodes[0];
+			var getingValueFromInputFiled = insideTD.value;
+			tdElemet.innerHTML = getingValueFromInputFiled;
+		}
 	}
-}
 
 // With this function we delete curnet row which button is clicked and button have parent and is td and td has parenet whis is tr and tr has rowIndex
-function deleteCurnetRow(r) {
-    var i = r.parentNode.parentNode;
-    document.getElementById("tableForInput").deleteRow(i.rowIndex);
-	 //console.log(i);
+	function deleteCurnetRow(r) {
+		var i = r.parentNode.parentNode;
+		document.getElementById("tableForInput").deleteRow(i.rowIndex);
+		 //console.log(i);
+	}
 }
