@@ -21,13 +21,8 @@ document.getElementById("save").onclick = function() {
 	clean = document.getElementById("personEmail");
 	clean.value = "";
 	//cistenje na input polinjata
-
-
-
 	//e.preventDefault(); treba gore vo function da se stavi e	
 }
-
-
 function submitInTable(getName,getEmail,getMobile){
 	var counterCells = 0;
 	var table = document.getElementById("tableForInput");
@@ -52,7 +47,6 @@ function submitInTable(getName,getEmail,getMobile){
 	var updateButtonCreating = document.createElement("button");
 	var updateText = document.createTextNode("Update");
 	updateButtonCreating.appendChild(updateText);
-	//updateButtonCreating.id = "update";
 	updateButtonCreating.className = "button update";
 	cellFour.appendChild(updateButtonCreating);
 	
@@ -62,20 +56,20 @@ function submitInTable(getName,getEmail,getMobile){
 	deleteButtonCreating.className = "button delete";
 	deleteButtonCreating.id = "btn_"+deleteCounter++;
 	deleteButtonCreating.type = "button";
-	var delDataAtt = document.createAttribute("data-value");
-	delDataAtt.value = deleteCounter++;
-	deleteButtonCreating.setAttributeNode(delDataAtt);
 	cellFour.appendChild(deleteButtonCreating);
 	// !!!!!   END Creating buttons and inserting in table row
 	
 	
 	var deleteButtons = document.getElementsByClassName("button delete");
 	var delBtnCount = deleteButtons.length;
-
-	for(var i=0; i < delBtnCount; i++){
-		deleteButtons[i].onclick = function(){
-			deleteCurnetRow(this);
-		};
+	deleteBtnRow();
+	
+	function deleteBtnRow(){
+		for(var i=0; i < delBtnCount; i++){
+			deleteButtons[i].onclick = function(){
+				deleteCurnetRow(this);
+			};
+		}
 	}
 	
 	var readButtons = document.getElementsByClassName("button read");
@@ -105,6 +99,7 @@ function submitInTable(getName,getEmail,getMobile){
 				saveButtons = document.getElementsByClassName("button save");
 				saveBtnCount = saveButtons.length;
 				saveBtnOnClick();
+
 			};
 		}
 	}
