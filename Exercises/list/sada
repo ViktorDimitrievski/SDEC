@@ -1,0 +1,142 @@
+/* ALDING STYLE */
+
+*{
+	margin: 0px;
+	padding: 0px;
+	
+}
+body{
+	/*width: 62.5rem;*/
+	margin: 0 auto;
+	background-color: white;
+}
+
+
+
+#showMe{
+	margin: 20px auto; 
+	display:table;
+	cursor:pointer;
+}
+
+
+.list-group-item{
+	color:orange;
+}
+
+#listCol{
+	color: red;
+}
+
+
+	#hideInList{
+		display:none;
+	}
+	#showInList{
+		display: block;
+		color:red;
+	}
+
+.sH{
+	display:block;
+	list-style:none;
+}
+
+
+
+
+
+
+$(".showMeMore").click(function(){
+	$(".sH").show("1000");
+	$(".showMeMore").hide();
+	$(".showMeLess").show();
+ });
+ 
+$(".showMeLess").click(function(){
+   $(".sH").hide("1000");
+   $(".showMeMore").show();
+	$(".showMeLess").hide();
+});
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+
+<!--bootstrap style file-->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!--custom style file-->
+<link rel="stylesheet" type="text/css" href="css/style.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+        
+   <section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Референци</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<ul class="list-group">
+						<li class="list-group-item">Изградба на Фекален Колектор – населба Лисиче 2011 г</li>
+						<li class="list-group-item">Изградба на Управна зграда на ЈП Водовод и Канализација –Скопје 2011г</li>
+						<li class="list-group-item">Реконструкција и санација на СОУ Кочо Рацин – Велес 2013г</li>
+						<li class="list-group-item">Реконструкција и Санација на ОУ Маршал Тито – Муртино 2013г</li>
+						<li class="list-group-item">Замена на бакарен покривач на кров на Влада на РМ 2013 г</li>
+				<li class="list-group-item" id="hideInList">Изградба на ревизиони водоводни шахти  - Скопје 2012 и 2013 г</li>
+						<li class="list-group-item sH" id="hideInList">Реконструкција и санација на ЈЗУ Општа болница – Струмица 2013 г</li>
+						<li class="list-group-item sH" id="hideInList">Изградба на Болница ПЕТ Центар – Скопје 2013-2014</li>
+						<li class="list-group-item sH" id="hideInList">Изведба на рехабилитација на 10(десет) основни училишта и 6(шест) средни училишта во Р.Македонија 2013-2014г</li>
+						<li class="list-group-item sH" id="hideInList">Изведба на рехабилитација на 8(осум) училишта во Р.Македонија 2014 г</li>
+						<li class="list-group-item sH" id="hideInList">Извведување на градежни и градежно-занаетчиски работи при реконструкција и адаптација на ЈЗУ Клиника за кардиологија Скопје 2014</li>
+					</ul>
+				</div>
+				
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<ul class="list-group" id="list-group-second">
+						<li class="list-group-item">Изградба на мала спортска сала во ДСУ Методија Митевски – Брицо, Скопје 2013г</li>
+						<li class="list-group-item">Адаптација на фудбалско игралиште во село Мороишта – Струга 2014г</li>
+						<li class="list-group-item">Адаптација на спортски полигон во село Нерези – Струга 2014г</li>
+						<li class="list-group-item">Адаптација на објект за потребите на Универзитетот за информатички науки и технологии, Охрид – касарна 1</li>
+						<li class="list-group-item sH" id="hideInList">Реконструкцја на 25 основни школи во Р.Македонија – Светска банка – 2010 година</li>
+						<li class="list-group-item sH" id="hideInList">Хидроизолација на каптажа Рашче – ЈП Водовод и канализација – 2011 година</li>
+						<li class="list-group-item sH" id="hideInList">Реконструкција на воени објекти – Министерство за одбрана –  2010 година</li>
+						<li class="list-group-item sH" id="hideInList">Изградба на болница Неуромедика – Емил Угриновски - 2015 година</li>
+						<li class="list-group-item sH" id="hideInList">Изведба на фасада на ул.Никола Вапцаров бр. 10 – Град Скопје – 2015 година</li>
+						<li class="list-group-item sH" id="hideInList">Изградба на стамбен објект на ул. Ристо Равановски бр.11 –  Гибрис Холдинг – 2015 година </li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<span class="showMeMore" id="showMe"> <i class="fa fa-plus-circle"></i> Прикажи повеќе</span>
+				<span class="showMeLess" id="showMe"  style="display:none"><i class="fa fa-minus-circle"></i> Прикажи помалку</span>
+			</div>
+		</div>
+	</section>
+
+<!-- jQuery for Bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<!--BOOTSTRAP SCRIPT FILE-->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!--CUSTOM SCRIPT FILE-->
+<script type="text/javascript" src="js/script.js"></script>
+<!--
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAHINJB8eDZ8pNvZRbT8ex8qRcCo8jbmU&signed_in=true&callback=initMap"></script>-->
+</body>
+</html>
