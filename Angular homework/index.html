@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" ng-app="homeWorkApp">
+<head>
+<meta charset="utf-8">
+	<title>Home Work APP</title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/css/style.css"/>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="container" ng-controller="inputFields">
+		<div class="row">
+			<div class="col-lg-1">
+			<label>Name:</label><br>
+			<label>E-mail:</label><br>
+			<label>Phone:</label>
+			
+			</div>
+			
+			<div class="col-lg-3">
+			<input type="text" ng-model="name" placeholder="Enter you name.."> {{name}} <br>
+			<input type="text" ng-model="email" placeholder="Enter you email.."><br>
+			<input type="number" ng-model="phone" placeholder="Enter you phone.."><br>
+			<button type="button" ng-click="save()">Save</button>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-10">
+				<table style="border: 1px solid grey;">
+					<thead>
+						<tr>
+							<td>Name</td>
+							<td>Email</td>
+							<td>Phone</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="contact in contacts">
+							<td>{{contact.name}}</td>
+							<td>{{contact.email}}</td>
+							<td>{{contact.phone}}</td>
+							<td>
+								<button type="button">Read</button>
+								<button type="button">Edit</button>
+								<button type="button">Update</button>
+								<button type="button">Delete</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	
+	</div>
+	
+	
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>	
+<script src="/js/angular/angular.min.js"></script>	
+<script src="/js/script.js"></script>	
+
+</html>
