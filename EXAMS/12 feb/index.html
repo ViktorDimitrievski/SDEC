@@ -11,27 +11,124 @@
 </head>
 
 <body>
+
     <div class="container">
-<div class="row">
-    <div class="col-xs-4 col-md-4 col-lg-4 xoPa" data-click="s" data-pos="11"></div>
-    <div class="col-xs-4 col-md-4 col-lg-4 xoPa" data-click="s" data-pos="12"></div>
-    <div class="col-xs-4 col-md-4 col-lg-4 xoPa" data-click="s" data-pos="13"></div>
-</div>
-<div class="row">
-    <div class="col-xs-4 col-md-4 col-lg-4 xoPa" data-click="s" data-pos="21"></div>
-    <div class="col-xs-4 col-md-4 col-lg-4 xoPa" data-click="s" data-pos="22"></div>
-    <div class="col-xs-4 col-md-4 col-lg-4 xoPa" data-click="s" data-pos="23"></div>
-</div>
-<div class="row">
-    <div class="col-xs-4 col-md-4 col-lg-4 xoPa" data-click="s" data-pos="31"></div>
-    <div class="col-xs-4 col-md-4 col-lg-4 xoPa" data-click="s" data-pos="32"></div>
-    <div class="col-xs-4 col-md-4 col-lg-4 xoPa" data-click="s" data-pos="33"></div>
-</div>
+        <div class="row">
+            <h1>Внес на нов рецепт</h1>
+            <hr>
+            <div class="col-lg-4">
+                <label>Име на рецепт:
+                    <input type="text" required id="ime">
+                </label>
+                <label>Извор на рецепт:
+                    <input type="text" required id="izvor">
+                </label>
+                <h2>Состојки:</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Состојка</td>
+                            <td>Количина</td>
+                        </tr>
+                    </thead>
+                    <tbody id="dodavanjeSostojka">
+                        <tr id="prvaSostojka">
+                            <td>
+                                <select id="sostojka" required>
+                                    <option value="default">Select ingridient</option>
+                                    <option value="brasno">Brasno</option>
+                                    <option value="mleko">Mleko</option>
+                                    <option value="maslo">maslo</option>
+                                    <option value="sol">sol</option>
+                                    <option value="seker">seker</option>
+                                    <option value="jajca">jajca</option>
+                                    <option value="domati">domati</option>
+                                    <option value="piperki">piperki</option>
+                                    <option value="sirenje">sirenje</option>
+                                    <option value="kaskaval">kaskaval</option>
+                                    <option value="kompir">kompir</option>
+                                    <option value="meso">meso</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" id="kolicestvo">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button type="button" id="dodadiRecept">Додади РЕЦЕПТ</button>
+            </div>
+            <div class="col-lg-6">
+                <label for="">Време за подготовка:
+                    <input type="number" required id="vreme">
+                </label>
+                <br>
+                <label for="">Начин на подготовка</label>
+                <br>
+                <textarea id="podgotovka"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <button id="dodadiSostojka">Додади Состојка</button>
+            </div>
+        </div>
     </div>
-    
-<script src="js/jquery-2.2.0.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
+
+
+<!--
+
+    <hr>
+    <section id="listaRecepti">
+        <div class="container">
+            <h1>Листа на рецепти приготвени од кујната на баба</h1>
+            <div class="row">
+                <div class="col-12">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>Име на рецепт</td>
+                                <td>Извор на рецепт</td>
+                                <td>Број на состојки</td>
+                                <td>Подготовка</td>
+                                <td>Време на подготовка</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="prikazRecept">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+
+                </div>
+                <div class="col-lg-7>">
+
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

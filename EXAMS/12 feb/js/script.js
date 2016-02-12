@@ -1,25 +1,59 @@
 'use strict';
 
-
-
 $(document).ready(function () {
-    var klik = 0;
-    $(".xoPa").click(function () {
-        var a = $(this).data("click"); // ja zima vrednosta vo data koja treba da e s koja e pocetna vrednost 
-        console.log(a);
-        if (a === "s") { //proveruvame dali a e ednakva na s ako e ednakva togas dodavame vrednost 1 st e X
-            $(this).attr("data-click", 1)
-                .addClass("red")
-                .removeClass("xoPa");
-            
-            console.log($(this).data("click"));
+    var idCounter = 1; // vrednost na id za sekoj vnesen recept
+    var recepti = [{
+        id: "1",
+        ime: "Viktor",
+        izvor: "Baba.mi",
+        sostojki: [{
+            "brasno": 3,
+            "mleko": 3,
+            "maslo": 2,
+            "sol": 5,
+            "seker": 1,
+            "jajca": 2,
+            "domati": 4,
+            "piperki": 0,
+            "sirenje": 7,
+            "kaskaval": 0,
+            "kompir": 0,
+            "meso": 0
+        }],
+        vremePodgotovka: "",
+        nacinPodgotovka: ""
+    }];
 
-            autoClick();
-        }
+    $("#dodadiRecept").click(function () {
+        var imeInput = $("#ime").val();
+        var izvorInput = $("#izvor").val();
+        var sostojkaInput = $("#sostojka").val();
+        var kolicestvoInput = $("#kolicestvo").val();
+        var vremeInput = $("#vreme").val();
+        var podgotovkaInput = $("#podgotovka").val();
+        ++idCounter;
+        recepti.push({
+            id: idCounter,
+            ime: imeInput,
+            izvor: izvorInput,
+            sostojki:{
+              "brasno" : 3,
+            "piperki": 5
+            },
+            vremePodgotovka: vremeInput,
+            nacinPodgotovka: podgotovkaInput
+        });
     });
-
-    function autoClick() {
-        console.log($(".xoPa"));
-    }
-
+/*    $("#dodadiSostojka").click(function () {
+        var sostojkaInput = $("#sostojka").val();
+        if (sostojkaInput === "default") {
+            alert("Потребно е да ја одберете прво првата состојка на вашиот бабин рецепт!");
+        }else{
+        $("#prvaSostojka").clone().appendTo("tbody");
+        $("")
+        }
+    });*/
 });
+
+
+
