@@ -1,0 +1,14 @@
+.blue{
+    background-color:blue;
+}
+.red{
+    background-color:red;
+    cursor:no-drop;
+}
+
+.row > div{
+    width: 100px;
+    height: 100px;
+   /*  background-color: aquamarine */;
+    border: 2px solid grey;
+}
